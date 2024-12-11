@@ -1,0 +1,26 @@
+# Node.js dependencies
+node_modules/
+
+# Build output
+/dist/
+/build/
+/public/
+
+.vscode/
+
+# Logs
+*.log
+
+.DS_Store
+
+# Environment variable files
+*.env
+*.env.local
+*.env.*.local
+
+# macOS system files
+.DS_Store
+
+# IDE specific files
+.vscode/
+.idea/
