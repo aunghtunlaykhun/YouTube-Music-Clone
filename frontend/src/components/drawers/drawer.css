@@ -1,0 +1,101 @@
+.drawer_container {
+    position:static;
+    height:100vh;
+}
+
+.drawer_subContainer {
+    position:fixed;
+    left:0;
+    height:100%;
+    top:0;
+    align-items:center;
+    z-index:4;
+    /* padding-inline-end:85px; */
+}
+.drawer_subContainer.active {
+    border-right:0.5px solid #eee3;
+}
+
+.drawer_subContainer .menu_button{
+    padding:8px;
+    margin-inline-start:17px;
+    margin-top:12px;
+    border-radius: 100%;
+    font-size:1.5em;
+    /* margin-inline-start:5px; */
+}
+.drawer_subContainer .menu_button:hover{
+    background-color:#eee1;
+}
+
+.drawer_subContainer .drawer_items {
+    display:flex;
+    margin-block-start:13px;
+    padding-top:10px;
+    padding-inline:10px;
+    flex-direction: column;
+    /* margin-inline:20px; */
+    height:100%;
+}
+.drawer_subContainer .drawer_items button{
+    display:flex;
+    align-items:center;
+    flex-direction: column;
+    font-size : 1.65em;
+    width:var(--drawer-small-width);
+    padding-inline:25px;
+    box-sizing:border-box;
+    padding-block:10px;
+    border-radius:5px;
+}
+
+.drawer_subContainer .drawer_items button:hover{
+    background-color: #eee2;;
+}
+.drawer_subContainer .drawer_items button p {
+    font-size:unset;
+    font-size:0.41em;
+    text-align-last:left;
+}
+.drawer_subContainer .drawer_items.active {
+    position:sticky;
+    top:0px;
+    width:180px;
+    height:100%;
+    padding-inline:7px;
+    background-color: black;
+}
+.drawer_subContainer .drawer_items.outt{
+    border-right:0.5px solid #eee3;
+}
+.drawer_subContainer .drawer_items.active button{
+    width:100%;
+}
+.drawer_subContainer .drawer_items.active button p{
+    font-size:0.55em;
+}
+
+.drawer_subContainer .drawer_items button.active{
+    background-color:#eee1;
+}
+
+ @media screen and (max-width:630px){
+    .container_div .drawer_container .drawer_subContainer .drawer_items{
+        visibility: hidden;
+    }
+    .container_div .drawer_container.dis .drawer_subContainer .drawer_items{
+        visibility: hidden;
+    }
+    .container_div .drawer_container.apea .drawer_subContainer .drawer_items{
+        visibility: visible;
+    }
+   
+  } 
+
+  .drawer_container .drawer_subContainer .drawer_items.active button{
+    display:flex;
+    flex-direction: row;
+    padding-inline:18px;
+    gap:25px;
+    /* width:150px; */
+}

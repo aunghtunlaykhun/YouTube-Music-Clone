@@ -1,0 +1,80 @@
+:root {
+  --color-bg1: rgb(108, 0, 162);
+  --color-bg2: rgb(8, 17, 82);
+  --color1: 18, 113, 255;
+  --color2: 221, 74, 255;
+  --color3: 100, 220, 255;
+  --color4: 200, 50, 50;
+  --color5: 180, 180, 50;
+  --color-interactive: 140, 100, 255;
+  --circle-size: 80%;
+  --blending: hard-light;
+  --nav-height: 60px;
+  --drawer-small-width: 50px;
+}
+
+.container_div {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  color: white;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.profile {
+  max-width: 33px;
+  border: 2px solid white;
+  border-radius: 100%;
+}
+
+.outlet_container {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: black;
+  top: var(--nav-height);
+}
+
+.playing-bar-container {
+  position: fixed;
+  /* width:100%; */
+  z-index: 4;
+  background-color: #333333;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.watch_drawer {
+  position: absolute;
+  top: var(--nav-height);
+}
+
+@media screen and (max-width: 615px) {
+  .watch_drawer {
+    position: fixed;
+    inset: 0 0 0 0;
+    z-index: 5;
+    height: 100%;
+    animation: watch-drawer-animation 0.5s 1 ease-out;
+  }
+  @keyframes watch-drawer-animation {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+}
+@media screen and (min-width: 930px) {
+  .outlet_container.active {
+    padding-inline-start: 100px;
+  }
+  .watch_drawer.active {
+    padding-inline-start: 100px;
+  }
+}

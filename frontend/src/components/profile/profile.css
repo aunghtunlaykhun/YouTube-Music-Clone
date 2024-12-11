@@ -1,0 +1,70 @@
+.profile_subContainer {
+    background-color: #333333;
+    max-width:320px;
+    min-width:320px;
+    text-wrap:wrap;
+    border-radius: 10px;
+    max-height:530px;
+    min-height:530px;
+}
+.profile_subContainer .profile_content {
+    width:100%;
+    white-space: nowrap;
+}
+.profile_subContainer .profile_content .profile_header {
+    display:flex;
+    gap:15px;
+    padding:20px;
+    padding-bottom:20px;
+    border-bottom:0.1px solid #eee3;
+    align-items: center;
+}
+.profile_subContainer .profile_content .profile_header .profile_img{
+    
+}
+.profile_subContainer .profile_content .profile_header .profile_img img{
+    max-width:35px;
+    width:35px;
+    border-radius: 100%;
+}
+
+.profile_subContainer .profile_content .profile_header .profile_name {
+    grid-area:ph2;
+    /* white-space: nowrap; */
+}
+.profile_subContainer .profile_content .profile_header .profile_name p{
+    font-size:1em;
+    font-weight:600;
+}
+
+.profile_subContainer .profile_content .profile_header .profile_setting{
+    grid-area:ph3;
+    /* white-space: nowrap; */
+}
+.profile_subContainer .profile_content .profile_header .profile_setting p{
+    font-size:0.7em;
+    font-weight:600;
+}
+
+.profile_subContainer .profile_content .profile_features {
+    display:flex;
+    flex-direction: column;
+}
+.profile_subContainer .profile_content .profile_features button{
+    display:flex;
+    gap:20px;
+    padding-inline-start:20px;
+    padding-block:10px;
+    align-items: center;
+}
+.profile_subContainer .profile_content .profile_features button p{
+    font-size:medium;
+    font-weight:500;
+}
+.profile_subContainer .profile_content .profile_features button:hover{
+    background-color:#eee6;
+}
+.profile_content .profile_features .border-line{
+    width:100%;
+    border-bottom:0.1px solid #eee3;
+}

@@ -1,0 +1,217 @@
+.playlist_container {
+  width: 100%;
+  position: relative;
+  padding-bottom: 0;
+}
+
+.playlist_container .bg-img {
+  position: absolute;
+  top: 0;
+  bottom: -100px;
+  left: 30%;
+  right: 0;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  filter: blur(120px);
+  z-index: -1;
+}
+
+.playlist_subContainer {
+  display: grid;
+  grid-template-columns: minmax(40%, 1fr) minmax(60%, 1fr);
+  width: 100%;
+  height: 100vh;
+}
+
+.playlist_subContainer .playlist_tools_container {
+  position: relative;
+  padding-inline: 10px;
+}
+
+.playlist_subContainer .playlist_tools_container .playlist_tools_subContainer {
+  position: sticky;
+  top: 100px;
+  padding-inline: 50px;
+  padding-block: 25px;
+  justify-self: end;
+  flex-direction: column;
+  flex-shrink: 1;
+  text-align: center;
+  display: flex;
+  width: fit-content;
+  gap: 15px;
+}
+
+.playlist_subContainer
+  .playlist_tools_container
+  .playlist_tools_subContainer
+  .player_tools
+  .play_pause {
+  padding: 20px;
+  font-size: 25px;
+  border-radius: 100%;
+  background-color: red;
+}
+
+.playlist_subContainer
+  .playlist_tools_container
+  .playlist_tools_subContainer
+  img {
+  min-width: 270px;
+  max-width: 270px;
+  aspect-ratio: 1 / 1;
+  border-radius: 3.5px;
+}
+
+.playlist_subContainer .playlist_tools_container .player_tools {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.playlist_subContainer .playlist_tools_container .player_tools .tools_btn {
+  font-size: 18px;
+  padding: 13px;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.playlist_subContainer .playlist_lists_container {
+  padding-inline-start: 40px;
+  padding-top: 75px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-inline-end: 200px;
+}
+.playlist_subContainer .playlist_lists_container .playlist_lists_parent {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding-block: 10px;
+  cursor: pointer;
+}
+
+.playlist_subContainer .playlist_lists_container .playlist_child {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.playlist_subContainer
+  .playlist_lists_container
+  .playlist_child
+  .play_number
+  .play_btn {
+  display: none;
+  font-size: 20px;
+  width: 38px;
+  margin-inline-start: -3px;
+}
+
+.playlist_subContainer
+  .playlist_lists_container
+  .playlist_lists_parent:hover
+  .play_btn {
+  display: block;
+}
+
+.playlist_subContainer
+  .playlist_lists_container
+  .playlist_lists_parent:hover
+  .play_number
+  p {
+  display: none;
+}
+
+.playlist_subContainer
+  .playlist_lists_container
+  .playlist_lists_parent
+  .playlist_child
+  .play_number
+  p {
+  font-size: 16px;
+  width: 35px;
+}
+
+.playlist_subContainer
+  .playlist_lists_container
+  .playlist_lists_parent:hover
+  .playlist_minutes
+  h3 {
+  display: none;
+}
+
+.playlist_lists_parent .playlist_minutes .edits {
+  display: none;
+}
+
+.playlist_lists_parent .playlist_minutes .edits button {
+  font-size: 25px;
+}
+.playlist_lists_parent .playlist_minutes .edits button:hover {
+  background-color: red;
+}
+
+.playlist_lists_parent .playlist_minutes .edits .down {
+  margin-inline-end: 25px;
+}
+.playlist_lists_parent .playlist_minutes .edits .up {
+  margin-inline-end: 20px;
+}
+
+.playlist_lists_parent .playlist_minutes .edits .dots {
+  margin-inline-end: 30px;
+}
+
+.playlist_lists_parent .playlist_minutes .edits .square {
+  justify-self: end;
+}
+
+.playlist_lists_parent:hover .playlist_minutes .edits {
+  display: block;
+  margin-inline-end: -4px;
+}
+
+.playlist_child .playlist_listname {
+  line-height: 1.6;
+}
+.playlist_child .playlist_listname h5 {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 700;
+}
+.playlist_lists_parent:hover .playlist_minutes h3 {
+  font-size: 18px;
+}
+@media screen and (max-width: 1149px) {
+  .playlist_subContainer {
+    display: flex;
+    padding-inline-start: 70px;
+    flex-direction: column;
+  }
+  .playlist_subContainer .playlist_tools_container {
+    margin-inline: auto;
+    justify-self: auto;
+  }
+  .playlist_lists_container {
+    width: 70%;
+    margin-inline: auto;
+    padding: unset !important;
+    padding: 10px !important;
+  }
+  .playlist_subContainer
+    .playlist_tools_container
+    .playlist_tools_subContainer
+    img {
+    max-width: 235px !important;
+    min-width: 235px !important;
+    aspect-ratio: 1 / 1;
+  }
+}
+@media screen and (max-width: 630px) {
+  .playlist_subContainer {
+    padding-inline-start: 0px !important;
+  }
+}

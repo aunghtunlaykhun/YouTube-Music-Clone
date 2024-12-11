@@ -1,0 +1,25 @@
+.extra_subContainer{
+    width:100%;
+    padding-block:10px;
+    display:flex;
+    flex-direction: column;
+}
+.extra_subContainer .extra-func-btn{
+    display:flex;
+    align-items: center;
+    gap:15px;
+    padding:12px;
+}
+.extra_subContainer .extra-func-btn:hover{
+    background-color: #333333;
+}
+.extra_subContainer .extra-func-btn .icon{
+    font-size:0.7em;
+}
+
+.extra_subContainer .extra-func-btn .title{
+    font-size:0.55em;
+    text-align:start;
+    filter:brightness(1.5);
+    font-weight:450;
+}

@@ -1,0 +1,236 @@
+.register_container {
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+    z-index:0;
+    background-color:#111111;
+}
+
+
+@property --angle{
+    syntax:'<angle>';
+    inherits: false;
+    initial-value:0deg;
+  }
+
+@media screen and (max-width:767px){
+    .register_background {
+        background:url('/radio_head.png') no-repeat;
+        background-position:center;
+        background-size:100% 100%;
+        width:100%;
+        height:100%;
+        position:absolute;
+        object-fit: cover;
+        opacity:0.1;
+        z-index:-1;
+    }
+}
+
+.register_card {
+    display:flex;
+    width: 100%;
+    height:100%;
+    padding-inline:10px;
+}
+
+.register_header {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+
+.register_header img{
+    width:40px;
+    height:40px;
+    object-fit: cover;
+}
+.register_logo_name {
+    font-size : 1.9em;
+    font-weight:bold;
+    -webkit-text-stroke: 1px #eee3;
+}
+
+.register_option {
+    display:flex;
+    justify-content: center;
+    margin-top:40px;
+    gap:35px;
+    font-size:1.1em;
+    font-weight:700;
+}
+
+
+.register_form{
+    margin:auto;
+    width:500px;
+    max-width:500px;
+    position:relative;
+    background-color:black;
+    padding-inline:50px;
+    padding-block:30px;
+}
+
+.register_form::before,
+.register_form::after{
+    content:'';
+    position:absolute;
+    width:100.5%;
+    height:101%;
+    background:conic-gradient(from var(--angle), transparent , blue);
+    z-index:-1;
+    top:50%;
+    left:50%;
+    translate:-50% -50%;
+    animation:runningButton 5s linear infinite;
+}
+
+.register_form:after{
+    filter:blur(5px);
+}
+
+.register_input_field {
+    display:flex;
+    flex-direction:column;
+    gap:40px;
+    margin-top:40px;
+}
+
+input {
+    width:100%;
+    padding:10px;
+    box-sizing: border-box;
+    border-radius:10px;
+}
+
+.login_checkbox input{
+    width:auto;
+}
+
+input:focus {
+    outline:none;
+}
+
+.register_submit {
+    background-color:#428374;
+    border-radius:10px;
+    height:50px;
+    color:#eee;
+    font-weight: 700;
+    width:100%;
+    position:relative;
+}
+.register_username{
+    position:relative;
+}
+.register_email{
+    position:relative;
+}
+.login_email{
+    position:relative;
+}
+.login_password{
+    position:relative;
+}
+.register_input_field p{
+    position:absolute;
+    bottom:-18px;
+    font-size: 0.55em;
+    font-weight: 700;
+    letter-spacing: 0.9px;
+    color:red;
+}
+.register_password{
+    position:relative;
+}
+.register_checkbox{
+    position:relative;
+}
+
+.register_submit::before{
+    filter:blur(20px);
+    opacity:0.5;
+}
+
+.register_submit::before,
+.register_submit::after{
+    content:'';
+    position:absolute;
+    width:101%;
+    height:105%;
+    border-radius:inherit;
+    top:50%;
+    left:50%;
+    translate:-50% -50%;
+    background:conic-gradient(from var(--angle),transparent, blue);
+    z-index:-1;
+    animation:runningButton 5s linear infinite;
+}
+
+@keyframes runningButton {
+    from{
+        --angle:0deg;
+    }to{
+        --angle:360deg;
+    }   
+}
+
+.forgot_pass{
+    text-align:center;
+    font-size:1em;
+    color:#eee3;
+    font-weight:500;
+}
+
+.sign_in {
+    position:relative;
+}
+
+.register_option h1 {
+    padding-block:10px;
+    cursor:pointer;
+}
+
+.sign_up {
+    position:relative;
+}
+
+.sign_in.active::after{
+    position:absolute;
+    width:100%;
+    height:2px;
+    border-radius:5px;
+    background-color:#eee3;
+    z-index:2;
+    bottom:0px;
+    left:0;
+    content:'';
+}
+
+.sign_up.active::after{
+    position:absolute;
+    width:100%;
+    height:2px;
+    border-radius:5px;
+    background-color:#eee3;
+    z-index:2;
+    bottom:0px;
+    left:0;
+    content:'';
+}
+
+.already {
+    text-align:center;
+    font-size:0.8em;
+    color:#eee3;
+}
+.already span {
+    color:blue;
+    cursor:pointer;
+}
+
+
+
+

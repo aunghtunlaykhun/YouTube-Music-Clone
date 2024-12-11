@@ -1,0 +1,50 @@
+.openSong_container {
+    position:relative;
+    width:100%;
+    height:100%;
+}
+
+.song_background {
+    position:fixed;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    bottom:0;
+    top:0;
+    right:0;
+    left:0;
+    z-index:-1;
+    filter:blur(10px);
+    background:linear-gradient(to bottom,rgba(0,0,0,0.2),rgba(0,0,0,0.4),rgba(0,0,0,0.6),rgba(0,0,0,1))
+}
+
+.icon_div {
+    display:flex;
+    justify-content: space-between;
+}
+
+.playing_song_div {
+    overflow: hidden;
+    max-height:20%;
+}
+
+.playing_song {
+    width:100%;
+    margin-top:15px;
+    height:280px;
+    max-height:20%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.song_content {
+    overflow: hidden;
+    padding:15px;
+}
+
+.playing_tool_first_div{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+

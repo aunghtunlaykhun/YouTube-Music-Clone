@@ -1,0 +1,126 @@
+.dashboard_container {
+    position:relative;
+    width:100%;
+    height:100dvh;
+}
+.dashboard_nav_container {
+    display:flex;
+    justify-content: space-between;
+    padding-block:10px;
+}
+.dashboard_nav1 {
+    display: flex;
+    justify-content: start;
+    gap:10px;
+    align-items: center;
+}
+.dashboard_nav2 {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.dashboard_nav2 button {
+    font-size:larger;
+}
+
+.dashboard_content_container {
+    display:grid;
+    grid-template-areas:" grid1     grid2       grid4"
+                        " grid1     grid3       grid4"
+                        " grid1     grid3       grid4";
+    position:relative;
+    grid-template-columns: minmax(20px,100px) minmax(50px,1fr) minmax(120px,120px);
+    gap:10px;
+}
+
+.minibar_container{
+    min-width:150px;
+}
+
+.blank_space{
+    grid-area:grid1;
+}
+.dashboard_title{
+    grid-area:grid2;
+}
+.dashboard_section{
+    grid-area:grid3;
+}
+.minibar_container{
+    grid-area:grid4;
+    flex-shrink:0;
+    flex-wrap:nowrap;
+}
+
+.dashboard_title{
+    padding-top:100px;
+    display:flex;
+    flex-direction: column;
+}
+.dashboard_title img{
+    width:100px;
+    aspect-ratio: 1/1;
+    padding-bottom:10px;
+    padding:5px;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+.dashboard_title h1{
+    font-size:2.5em;
+    font-weight: bolder;
+    flex-shrink: 1;
+    text-overflow:ellipsis;
+    overflow-wrap: break-word;
+    color:#eee3;
+}
+.div_interval{
+    width:60px;
+    height:100%;
+}
+.sidebar_container_div {
+    width:calc(25%);
+    flex-shrink:0;
+    flex-grow:0;
+}
+.main_section_container_div {
+    width:calc(75% + 0px);
+    flex-shrink:1;
+    flex-grow:1;
+}
+.minibar_container {
+    top:0;
+    right:0;
+    width:80px;
+    height:100%;
+}
+.dashboard_section{
+    display:flex;
+    overflow:hidden;
+}
+@media screen and (max-width:500px) {
+    .dashboard_section{
+        gap:10px;
+    }
+    .dashboard_title{
+        padding-top:50px;
+    }
+    .div_interval{
+        display:none;
+    }
+}
+@media screen and (max-width:350px){
+    .dashboard_content_container{
+        grid-template-areas: "grid2       grid4"
+                               "grid3       grid4";
+        grid-template-columns: minmax(80px,1fr) minmax(90px,90px);
+    }
+    .blank_space{
+        display:none;
+    }
+    .dashboard_section{
+        padding:8px;
+    }
+    .dashboard_title{
+        padding:8px;
+    }
+}

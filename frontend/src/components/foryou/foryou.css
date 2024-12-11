@@ -1,0 +1,94 @@
+.foryou_subContainer {
+  width: 100%;
+  /* min-height:100%; */
+}
+.foryou_slider_container {
+  width: min(1400px, 100%);
+  height:70vh;
+  overflow: hidden;
+  padding-inline: 50px;
+  flex-shrink: 1;
+}
+
+.foryou_slider_container .foryou_slider_items {
+  display: flex;
+  padding-top: 20px;
+  flex-wrap: nowrap;
+  gap: 30px;
+  flex-shrink: 1;
+  width: 100%;
+  margin: 0;
+  flex-basis: 0;
+  padding-bottom: 15px;
+  overflow-x: scroll;
+}
+.foryou_slider_container .foryou_slider_items::-webkit-scrollbar {
+  width: 0;
+}
+.foryou_slider_container .foryou_slider_items:hover::-webkit-scrollbar {
+  width: auto;
+}
+.foryou_slider_container .foryou_slider_items:hover::-webkit-scrollbar-thumb {
+  background-color: #eee6;
+}
+.foryou_slider_items .foryou_childc {
+  white-space: nowrap;
+}
+.foryou_slider_items .foryou_childc img {
+  max-width: 190px;
+  min-width: 190px;
+  border-radius: 3px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+.foryou_slider_items .foryou_childc h4 {
+  font-weight: 800;
+}
+.foryou_slider_items .foryou_childc p {
+  font-weight: 500;
+  opacity: 0.7;
+}
+.foryou_slider_items .foryou_childc .foryou_info {
+  padding-top: 15px;
+}
+.foryou_slider_container .title_div {
+  display: flex;
+  justify-content: space-between;
+}
+.foryou_subContainer .foryou_slider_container .foryou_title {
+  font-size: 1.5em;
+  font-weight: 900;
+  white-space: nowrap;
+  transform: scaleY(1.2);
+}
+.foryou_slider_container .title_div .button_container {
+  display: flex;
+  gap: 20px;
+}
+.foryou_subContainer .playAll_btn {
+  border-radius: 1000px;
+  padding-inline: 15px;
+  padding-block: 5px;
+  font-weight: 600;
+  border: 0.1px solid #eee3;
+}
+.foryou_slider_container .title_div .button_container .arrow_div {
+  display: flex;
+  gap: 10px;
+}
+.foryou_slider_container .title_div .button_container .arrow_div button {
+  padding: 10px;
+  border-radius: 100%;
+  white-space: nowrap;
+  border: 0.1px solid #eee3;
+}
+
+.foryou_slider_container .title_div .button_container .arrow_div button:hover {
+  background-color: #eee1;
+}
+
+@media screen and (max-width: 1260px) {
+  /* .foryou_subContainer .foryou_slider_container{
+        padding-inline:50px;
+    } */
+}
